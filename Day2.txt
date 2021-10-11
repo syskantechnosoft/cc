@@ -1,0 +1,203 @@
+Spring - Java Framework 
+2003 - Rod Jhonson
+
+
+Lightweight framework - 
+framework of frameworks - it supports other java based framework.
+
+Stand-alone (desktop based) --- JAVA SE (awt, swing, fx, )  - jar
+
+Web- Application (Servlet, JSP,JSF) - Using Broswer we access the application - war
+
+Enterprise Application - EJB, JMS, Chat Bot, Web Service, JAXB,  - ear
+
+JAR - Java Archieve (collection of classes & Interfaces)
+WAR - Web Archieve (container details) - web /app server 
+EAR - Enterprise Archieve (jar+war+ EE features)
+
+Whatsapp - web interface, mobile, stand-alone 
+
+.zip,.rar -- 
+
+struts - java based framework
+
+JPA - (Hibernate, EclipseLink, iBatis.... )
+
+official site
+spring.io
+
+
+It will simplify the process of creating Enterprise application.
+
+EJB, Web Service (Lot of xml based configuration)
+
+XML - case & space sensitive markup lang - way to store and transfer data between application/frameworks/prog lang & platform
+
+
+Eclipse IDE - Eclipse for SE, EE, 
+Eclipse - STS (Spring Tool Suite)
+Markup Lang - tag based lang 
+
+HTML - HyperText Markup Lang (tags are pre-defined & not case sensitive) -- way to display the data
+
+JVM based Lang - JAVA, Kotlin, Groovy 
+
+Kotlin - Android Apps dev
+
+
+java -jar sts4.12.jar
+
+Spring Framework uses 2 dp IoC, DI
+Design Pattern - Optimal Solution to resolve a particular challenge
+
+Core JAVA DP 
+Adv JAVA DP
+
+MVC - Model View Controller 
+Model (represents data)
+View (Represents front end) - html
+Controller - 
+
+
+Singleton, multiton, Factory, Facade, Builder, Iterator etc.,
+
+IoC - Inversion of Control 
+DI - Dependency Injection 
+
+
+Employee emp = new Employee(100,"test',"test@gmail.com"); //calling a default constructor with new keyword
+
+
+tightly coupled code 
+
+@Autowire 
+Employee emp;
+
+spring boot - 
+
+
+
+Employee
+
+
+JAVA Coding/Naming Convention
+
+Class name should start with Capital Letter
+package name should be in small case only (reverse of the company URL)
+
+methods & variables start with lower case.
+In case of two or more words, capitalise the first character from second word onwards  - Camel Casing
+
+JAVA uses camel casing for naming convention
+
+
+
+Hyderabad - mumbai 
+1) Bus, Car
+2) Train
+3) Flight 
+4) Own Vehicle
+
+
+
+
+Ctrl+=  ---  To increase the font size in the Eclipse/STS
+
+
+Ctrl+Space   --- To Auto complete the code, (code suggestion/intellisense)
+
+
+java2s = All jar needs
+mvnrepository   = pom, graddle... jar
+
+
+Right click Project ->Build path -> Configure Build Path -> Libraries tab ->Add External Jars button
+
+
+Ctrl+ F11 = to run the java application
+
+
+memory address of your object reference  --  
+
+
+xml - user -defined tags 
+
+xsd - xml Schema definition
+
+dtd - document type definition/description
+
+
+Ctrl+Shift+O = Organize Imports
+
+
+Resource (I)
+BeanFactory(I) 
+ApplicationContext(I)
+
+ClassPathResource(C)
+XmlBeanFactory(C)
+ClassPathXmlApplicationContext(C)
+
+
+1) Constructor Injection <constructor-arg>
+2) Setter Injection <property> 
+
+
+1) by calling default constructor  (setter methods)
+2) by calling all-args constructor 
+
+
+
+AOP - Aspect Oriented Programming
+
+ORM - 
+
+MVC - Spring Web MVC  ( CRUD )
+
+
+HashCode
+
+
+
+Annotation --  JAVA 5 
+
+Annotation -- Metadata  -- Data about Data 
+
+1) The Complete Reference JAVA 
+
+a) TOC - Table of Contents
+b) Index - concepts in alphabetical order 
+
+
+
+JAVA Classes 
+@Annotation - provides more information about the resource (class/interface/variable/method)
+
+web.xml - deployment descriptor ( is option if jdk >=1.5)
+
+
+
+Ctrl+Shift+F --- to format your code (proper alignment)
+
+
+
+Two Types of Annotation
+1) Built-in Annotation
+2) Custom/User-defined Annotation
+
+MetaAnnotation - Annotation used on top of Annotation is called meta Annotation
+
+
+
+
+Food Application
+
+ 1) MenuItem (Food Items)
+ 2) Cart 
+ 3) Rating
+ 4) User 
+
+Create class for all the above, (5 rows in each) 
+
+autowire it using setter injection, add a starter class to test your DI.
+
