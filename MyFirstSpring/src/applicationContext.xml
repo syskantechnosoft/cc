@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="acc" class="com.tcs.Account">
+		<property name="id" value="100"></property>
+		<property name="accountType" value="Savings"></property>
+		<property name="balance" value="7000.67f"></property>
+	</bean>
+
+	<bean id="acc1" class="com.tcs.Account">
+		<property name="id" value="101"></property>
+		<property name="accountType" value="Current"></property>
+		<property name="balance" value="18876.67f"></property>
+	</bean>
+
+	<bean id="address" class="com.tcs.Address">		
+		<property name="doorNo" value="250"></property>
+		<property name="streetName" value="First Street"></property>
+		<property name="city" value="chennai"></property>
+		<property name="state" value="tn"></property>
+		<property name="zip" value="600001"></property>
+		<property name="country" value="india"></property>
+	</bean>
+
+	<bean id="emp1" class="com.tcs.Employee">
+		<property name="id" value="100"></property>
+		<property name="name" value="abc"></property>
+		<property name="homeAddress" ref="address" ></property>
+	</bean>
+</beans>
