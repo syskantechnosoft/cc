@@ -1,0 +1,244 @@
+JPA - Implementation
+
+JPA - Java Persistance API (Storing the Data permanently in a structured way)
+
+Flat File Storing -- Un Structured data 
+
+
+Proper structured way -- (rows & Columns)  - Table 
+
+
+RDBMS - Relational Database Management System (Relations)
+
+UNION, INTERSET, VENN DIAGRAM 
+
+
+SQL - Structured Query Lang
+
+JDBC - Java Database Connectivity 
+
+5 Interfaces
+java.sql (package)
+1) Driver
+2) Connection
+3) Statement/PreparedStatement/CallableStatement
+4) ResultSet
+5) DatabaseMetaData/ResultSetMetaData
+
+
+Classes
+1) Date
+2) Time
+3) DriverManager
+
+
+
+
+Any Database (MySQL/Postgres/Oracle/MS Sql/DB2)
+
+Web Server/ DB Server
+Client - server (requester- responder)  [request - response]
+human+computer [user+browser] 
+
+
+MySQL Server + MySQL Client 
+
+URL - Login Credentials 
+
+1) Driver Installation & Turn on printer
+2) Physical connection 
+3) Configuration & warranty
+4) Test Print
+5) Switch off printer
+
+
+
+JDBC  (Interacting to any DB) [Inter Process Communication]
+1) Loading & Registering the Driver
+2) Establishing the connection (URL,USERNAME, PASSWORD)
+3) Creating and Executing the Query
+4) Storing & Processing the Result
+5) Closing all the resources
+
+
+MySQL Server + MySQL Client
+
+MySQL Client 
+1) Command Line Client (CUI) - commands (MySQL Command Line Client)
+2) GUI Client (MySQL Workbench) - Graphical User Interface 
+
+
+
+open Mysql client
+Enter the password : root
+
+mysql>show databases;
+
+mysql>use <db_name>;
+
+mysql>show tables;
+
+mysql>select * from <table_name>;
+
+
+
+MySQL Workbench (GUI)
+
+
+With the Help of any Programming Lang
+
+Java  - JDBC API
+
+
+CRUD - Create/Insert, Read,Update, Delete 
+
+
+Download the Driver Jar - https://dev.mysql.com/downloads/connector/j/
+(select platform independent) download the second for windows (FileSize:4.7 MB)
+
+
+Adding the Driver JAR - to the JAVA Project (Manually)
+1) Right Click Porject ->Build Path ->Configure Build Path ->Libraries(tab)
+2)Click on "Add External Jars" button
+
+
+
+URL - protocol:resource_type.url.domain  -- https://www.google.com
+
+DB Server  URL : jdbc:mysql://localhost:3306/tcs
+
+jdbc:mysql://127.0.0.1:3306/tcs
+
+
+server ip address - name of db, username, password
+
+
+
+
+	Driver Details				Connection URL 				UserName	Password
+MySQL 	com.mysql.cj.jdbc.Driver	jdbc:mysql://localhost:3306/syskan		root		root
+oracle	oracle.jdbc.driver.OracleDriver	jdbc:oracle:thin:@localhost:1521:xe		hr		hr
+postgres org.postgresql.Driver		jdbc:postgresql://localhost:5432/<db_name>	postgres	postgres
+
+
+
+
+JAVA - Serialization -- Process of storing the state of an object in a permanent storage (flat file)  .txt, .rtf
+
+
+Serializable Interface -- Marker Interface - An Interface with no methods  (transient)
+
+
+class Employee implements Serializable {
+
+}
+
+
+https://www.javatpoint.com/serialization-in-java
+
+
+
+Persistance -- Storing the state of object in database entity
+
+JPA - Java Persistance API  -- Specification 
+
+
+Popular JPA Implementation
+1) EclipseLink
+2) Generic
+3) Hibernate
+4) iBatis....
+
+
+ORM Framework -- Object Relational Mapping 
+
+
+https://www.eclipse.org/eclipselink/releases/2.5.php
+
+
+https://www.eclipse.org/downloads/download.php?file=/rt/eclipselink/releases/2.5.2/eclipselink-2.5.2.v20140319-9ad6abd.zip
+
+
+
+Extract the zip file content
+
+Create a JPA Project in Eclipse EE
+select JPA version as 2.1
+select runtime as jre
+
+
+JPA Implementation
+In JPA Facet page, select EclipseLink2.5.x (from the drop down)
+JPA Implementation, Select User Library  and click on "New User Library" ICON
+select manage user library & add new user library by clicking "new" button
+give the name for user library (EcliplseLink2.5.2) , add External Jars
+
+D:\Jars\eclipselink-2.5.2.v20140319-12Oct2021\eclipselink\jlib (eclipselink.jar)
+D:\Jars\eclipselink-2.5.2.v20140319-12Oct2021\eclipselink\jlib\jpa\ (javax.pers.jar,modelgen&jpars.jar)
+
+
+
+Database connection details
+1) Click on "Add Connection" link
+2) select the DB you like to interact (MySQL)
+3) click next button,
+4) in the driver config page, click on "New driver definition" icon
+5) select MySQL 5.0.1 driver from the available options
+6) go to "JAR List" tab
+7) select the jar file, and clicl "edit jar/zip button
+8) download & extract connector/j for 5.0.1  from https://downloads.mysql.com/archives/c-j/ 
+and add the jar 
+9) Select "properties" tab to change db conncetion properties
+10) update db connection details like url, password, database name et., and click ok
+11) select "save password" check box and click on "Test Connection" button 
+12) You will get "Ping Succeeded msg if everything is ok
+13)click ok and select "Add driver library to build path" checkbox and click finish.
+
+
+
+After JPA Project 
+persistance.xml (JPA Content)
+
+JTA - Java Transaction API
+
+1) Click on JPA content and open Persistance.xml file
+2) In the connection tab, select transaction type as "Resource Local" 
+3) Then, click "populate from connection" link and save it.
+
+
+Generating the Entity Bean class automatically
+
+1) right click the project, select "JPA Entities from Tables"
+2) make sure you have connected to a schema(db) and select the table from the list of available tables
+3) click "next"
+4) 
+
+
+
+EntityManager  -- EntityManagerFactory
+
+
+
+Entity Tables
+
+Food Items
+id name category  price added-on(date) active(0/1) 
+Cart
+order_id  user_id  item_id qty price (calculated column)
+Ratings
+rating_id   user_id  item_id  rating (float value 0.0 -5.0) lastUpdateOn(Date)
+
+Users  
+user_id, username, password, email, mobile
+
+
+
+save all the create queries in a sql file
+
+insert atleast 5 records in each table and save the insert query.
+
+implment crud operation using JPA (EclipseLink)
+
+em.remove(Object obj) // for delete operation
+
+Car c1 = em.find(Car.class, 100);  // update operation
